@@ -3,6 +3,9 @@
     "description": "テスト用、ウェブアプリに行動やWebページ評価を送信します。",
     "version": "1.0",
     "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html"
+    },
     "content_scripts": [
         {
             "matches": [
@@ -197,5 +200,8 @@
             ],
             "js": ["contentScript.js"]
         }
+    ],
+    "permissions": [
+        "tabs"
     ]
 }

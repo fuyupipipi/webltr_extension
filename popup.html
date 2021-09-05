@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" charset="UTF-8">
+    </head>
+    <body>
+        <h1>Web access literacy Chrome Extension</h1>
+        <form action="http://127.0.0.1:8000/post/webeval" method="POST">
+            <p><label for="title-field">Title</label><br>
+            <input type="text" name="title" id="title-field"></p>            
+            <p><label for="url-field">URL</label><br>
+            <input type="url" name="url" id="url-field"></p>
+            <p><input type="submit" name="submit" value="このページを評価する" id="submit"></p>
+        </form>
+        <script src="popup.js"></script>
+    </body>
+</html>
