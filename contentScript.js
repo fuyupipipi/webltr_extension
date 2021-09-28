@@ -1,7 +1,7 @@
 //'use strict';
-/* let currentUrl = location.href.toString();
+let currentUrl = location.href.toString();
 console.log("current url: " + currentUrl);
- */
+
 /* 
 patternのオブジェクト定義
     id: webappのオプションmodelのプライマリーキーに対応
@@ -9,7 +9,7 @@ patternのオブジェクト定義
     pattern: 正規表現パターン
     removalPattern: クエリスキーマに何も入ってない場合(イコールで止まっている)や全期間検索を除外
 */ 
-/* const optionPattern = [
+const optionPattern = [
     {
         id: 1,
         label: 'Not',
@@ -37,10 +37,10 @@ patternのオブジェクト定義
         pattern: /site%3A|site:|as_sitesearch=/,
         removalPattern: /as_sitesearch=\&/
     }
-]; */
+];
 
 // データをPOSTする関数
-/*
+/**
  * データをPOSTする
  * @param String アクション
  * @param Object POSTデータ連想配列
@@ -48,7 +48,7 @@ patternのオブジェクト定義
  * サンプルコード
  * <a onclick="execPost('/hoge', {'fuga':'fuga_val', 'piyo':'piyo_val'});return false;" href="#">POST送信</a>
  */
-/*  function execPost(action, paramName, paramValue) {
+ function execPost(action, paramName, paramValue) {
     // フォームの生成
     var form = document.createElement("form");
     form.setAttribute("action", action);
@@ -63,11 +63,11 @@ patternのオブジェクト定義
     form.appendChild(input);
     // submit
     form.submit();
-   } */
+   }
 
 
 // csrfトークンを取得
-/* function getCookie(name) {
+function getCookie(name) {
     let cookieValue = null;
     if (document.cookie && document.cookie !== '') {
         const cookies = document.cookie.split(';');
@@ -81,9 +81,9 @@ patternのオブジェクト定義
         }
     }
     return cookieValue;
-} */
+}
 // const csrftoken = getCookie('csrftoken');
-/* 
+
 function checkSession() {
     const request = new Request(
         "http://127.0.0.1:8000/api/opt_search_log/",
@@ -130,7 +130,7 @@ function postOptAchv(optId) {
         }).catch(error => {
         console.error(error);
         });
-}; */
+};
 /* Webappのview側で設定するので不要
 // ローカルテスト用action: http://127.0.0.1:8000/post/option/<id>/add
 // input name: regist_time
@@ -146,7 +146,7 @@ let sec = dateNow.getSeconds();
 let registTime = year + "-" + month + "-" + date + "¥s" + hour + ":" + min + ":" + sec; 
 */
 // optionSearchオブジェクトの各要素に繰り返し処理
-/* checkSession();
+checkSession();
 const searchOptionJudge = optionPattern.forEach(optionObj => {
     let optid = optionObj.id;
     let label = optionObj.label;
@@ -170,4 +170,3 @@ const searchOptionJudge = optionPattern.forEach(optionObj => {
         console.log(currentUrl.match(removalPattern));
         console.log(label + "_search: none");
     }});
- */
