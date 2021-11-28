@@ -4,14 +4,14 @@
         <meta http-equiv="content-type" charset="UTF-8">
     </head>
     <body>
-        <h1>ウェブサイト評価システムサポートツール</h1>
-        <form action="https://webltr-webapp.herokuapp.com/webeval/post" method="GET" id="extension" target="_blank">
-<!--         <form action="http://127.0.0.1:8000/webeval/post" method="GET" id="extension" target="_blank">
- -->            <p><label for="title-field">Title</label><br>
+        <h3>ウェブサイト評価システムサポートツール</h3>
+        <a href="https://webltr-webapp.herokuapp.com/" target="_blank" rel="noopener noreferrer">ウェブアプリへアクセス</a>
+        <form action="https://webltr-webapp.herokuapp.com/webeval/post" method="GET" id="extension">
+            <p><label for="title-field">Title</label><br>
             <input type="text" name="title" id="title-field"></p>            
             <p><label for="url-field">URL</label><br>
             <input type="url" name="url" id="url-field"></p>
-            <p><input type="submit" name="submit" value="このページを評価する" id="submit"></p>
+            <p><input type="submit" name="submit" value="このページを評価する" class="btn" id="submit"></p>
         </form>
         <script src="popup.js"></script>
     </body>
